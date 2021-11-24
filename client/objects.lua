@@ -241,16 +241,16 @@ end)
 
 -- Threads
 
-CreateThread(function()
+Citizen.CreateThread(function()
     while true do
         if LocalPlayer.state.isLoggedIn then
             GetClosestSpike()
         end
-        Wait(500)
+        Citizen.Wait(500)
     end
 end)
 
-CreateThread(function()
+Citizen.CreateThread(function()
     while true do
         if LocalPlayer.state.isLoggedIn then
             if ClosestSpike then
@@ -279,11 +279,11 @@ CreateThread(function()
             end
         end
 
-        Wait(3)
+        Citizen.Wait(3)
     end
 end)
 
-CreateThread(function()
+Citizen.CreateThread(function()
     while true do
         if LocalPlayer.state.isLoggedIn then
             if ClosestSpike then
@@ -309,6 +309,6 @@ CreateThread(function()
                 end
             end
         end
-        Wait(3)
+        Citizen.Wait(3)
     end
 end)
